@@ -214,6 +214,8 @@ function ProgressStep({ title, description, status, isActive }: any) {
   );
 }
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+
 export default function OrderingPage() {
   const [language, setLanguage] = useState<'TH' | 'EN'>('TH');
   const [activeCategory, setActiveCategory] = useState('เมนูใหม่');
