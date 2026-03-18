@@ -599,7 +599,10 @@ export default function OrderingPage() {
 
       {/* Success Animation */}
       {showSuccess && (
-        <div className="fixed inset-0 bg-white/95 z-[100] flex flex-col items-center justify-center p-10 animate-in fade-in zoom-in duration-500">
+        <div 
+          onClick={() => setShowSuccess(false)}
+          className="fixed inset-0 bg-white/95 z-[200] flex flex-col items-center justify-center p-10 animate-in fade-in zoom-in duration-500 cursor-pointer"
+        >
           <div className="relative mb-8">
             <div className="absolute inset-0 bg-accent rounded-full animate-ping opacity-20"></div>
             <div className="w-32 h-32 bg-accent text-white rounded-[48px] flex items-center justify-center shadow-2xl relative z-10 rotate-12">
@@ -616,6 +619,9 @@ export default function OrderingPage() {
             <div className="w-px h-8 bg-accent/20"></div>
             <span className="text-accent font-black">3 {t.days} {t.streak} 🔥</span>
           </div>
+          <p className="mt-12 text-[10px] font-black uppercase tracking-widest text-gray-300 animate-pulse">
+            {language === 'TH' ? 'แตะเพื่อปิด' : 'Tap anywhere to dismiss'}
+          </p>
         </div>
       )}
 
