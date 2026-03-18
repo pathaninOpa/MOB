@@ -393,10 +393,11 @@ export default function OrderingPage() {
         </div>
 
         {/* Categories Bar */}
-        <div className="flex overflow-x-auto gap-4 no-scrollbar mt-6 -mx-6 px-6 select-none touch-pan-x">
+        <div className="flex overflow-x-auto gap-4 no-scrollbar mt-6 -mx-6 px-6 select-none touch-pan-x overscroll-x-contain">
           {categories.map(cat => (
             <button
               key={cat[language]}
+              draggable="false"
               onClick={() => setActiveCategory(cat[language])}
               className={`whitespace-nowrap px-4 py-2 rounded-2xl font-bold text-sm transition-all ${
                 activeCategory === cat[language]
