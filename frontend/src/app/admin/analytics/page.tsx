@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { BarChart3, TrendingUp, Users, Clock, ShoppingBag, Database, RefreshCcw, AlertTriangle, Utensils, Check } from 'lucide-react';
+import React, { useState, useEffect, ReactElement } from 'react';
+import { BarChart3, TrendingUp, Users, Clock, ShoppingBag, Database, RefreshCcw, AlertTriangle, Utensils, Check, LucideProps } from 'lucide-react';
 import StaffGuard from '@/components/StaffGuard';
 
 interface Ingredient {
@@ -217,7 +217,7 @@ function KPICard({ title, value, icon, trend, color = "text-gray-900" }: { title
     <div className="bg-white rounded-[32px] p-6 shadow-sm border border-gray-100 hover:shadow-lg transition-all">
       <div className="flex justify-between items-start mb-4">
         <div className="p-3 bg-gray-50 rounded-2xl text-gray-400">
-          {React.cloneElement(icon as React.ReactElement, { size: 24 })}
+          {React.cloneElement(icon as ReactElement<LucideProps>, { size: 24 })}
         </div>
         <span className="text-[10px] font-black text-accent uppercase tracking-widest">{trend}</span>
       </div>
