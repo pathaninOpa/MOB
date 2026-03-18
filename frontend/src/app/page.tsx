@@ -650,7 +650,7 @@ export default function OrderingPage() {
                   title={language === 'TH' ? 'กำลังปรุงอาหาร' : 'Preparing & Cooking'} 
                   description={language === 'TH' ? 'เชฟของเรากำลังปรุงอาหารให้อย่างตั้งใจ' : 'Our chefs are crafting your meal with care.'} 
                   status={activeOrder.status === 'Completed' ? 'Completed' : (activeOrder.status === 'Pending' ? 'Upcoming' : 'Current')} 
-                  isActive={activeOrder.status !== 'Pending' || activeOrder.status === 'Completed'} 
+                  isActive={activeOrder.status !== 'Pending'} 
                 />
                 <ProgressStep 
                   title={language === 'TH' ? 'ตรวจสอบคุณภาพ' : 'Quality Check'} 
