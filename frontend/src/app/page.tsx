@@ -349,8 +349,8 @@ export default function OrderingPage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white text-foreground font-sans max-w-lg mx-auto relative border-x border-gray-100 shadow-2xl">
-      {/* Friendly Header - High Z-Index to stay above blurs */}
-      <header className={`sticky top-0 z-[120] px-6 py-5 transition-all duration-500 ${
+      {/* Friendly Header - Moderate Z-Index so modals appear above it */}
+      <header className={`sticky top-0 z-[50] px-6 py-5 transition-all duration-500 ${
         showTrackerDetail || showPaymentQR || showSuccess || showSongModal ? 'bg-white shadow-md' : 'bg-white/80 backdrop-blur-md border-b border-gray-50'
       }`}>
         <div className="flex justify-between items-center">
