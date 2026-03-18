@@ -391,7 +391,7 @@ export default function OrderingPage() {
         </div>
 
         {/* Categories Bar */}
-        <div className="flex overflow-x-auto gap-4 no-scrollbar mt-6 -mx-6 px-6">
+        <div className="flex overflow-x-auto gap-4 no-scrollbar mt-6 -mx-6 px-6 select-none touch-pan-x">
           {categories.map(cat => (
             <button
               key={cat[language]}
